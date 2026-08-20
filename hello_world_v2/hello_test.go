@@ -17,4 +17,8 @@ func TestHello(t *testing.T) {
 	t.Run("Say 'Hello, world' when a non recognized language is passed and world when 'name' is empty", func(t *testing.T) {
 		assertCorrectMessage(t, Hello("", "French"), "Hello, world")
 	})
+
+	t.Run("Say hello in german", func(t *testing.T) {
+		assertCorrectMessage(t, Hello("Pato", "German"), "Hello, Pato")
+	})
 }
