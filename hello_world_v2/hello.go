@@ -8,21 +8,10 @@ import (
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const germanHelloPrefix = "Hallo, "
+const spanishLanguage = "spanish"
+const germanLanguage = "german"
 
-func HelloWorld() string {
-	return englishHelloPrefix + "world"
-}
-
-func HelloWithPerson(name string) string {
-	if name == "" {
-		name = "world"
-	}
-
-	return englishHelloPrefix + name
-
-}
-
-func HelloWithPersonAndLanguage(name, language string) string {
+func Hello(name, language string) string {
 	lowerCaseLanguage := strings.ToLower(language)
 	if name == "" {
 		switch lowerCaseLanguage {
@@ -30,18 +19,19 @@ func HelloWithPersonAndLanguage(name, language string) string {
 			name = "mundo"
 		case "german":
 			name = "welt"
+		default:
+			name = "world"
 		}
 	}
 	switch lowerCaseLanguage {
-	case "spanish":
+	case spanishLanguage:
 		return spanishHelloPrefix + name
-	case "german":
+	case germanLanguage:
 		return germanHelloPrefix + name
 	}
 	return englishHelloPrefix + name
-
 }
 
 func main() {
-	fmt.Println(HelloWorld())
+	fmt.Println(Hello("Pato", "Spanish"))
 }
