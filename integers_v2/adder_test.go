@@ -14,6 +14,7 @@ func TestAdder(t *testing.T) {
 	}
 }
 
+// This will also appear in the test result if we run it with `go test -v` (I guess it means verbose)
 func ExampleAdd() {
 	sum := Add(1, 5)
 	fmt.Println(sum)
