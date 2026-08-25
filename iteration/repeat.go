@@ -7,9 +7,16 @@ import "strings"
 // The Omnissiah would be proud
 
 func Repeat(character string, count int) string {
-	var repeated strings.Builder
-	for i := 0; i < count; i++ {
-		repeated.WriteString(character)
-	}
-	return repeated.String()
+	return strings.Repeat(character, 6)
 }
+
+// Old refactored function that we leave on purpose to
+// check the `for` pattern
+//
+// func Repeat(character string, count int) string {
+// 	var repeated strings.Builder
+// 	for i := 0; i < count; i++ {
+// 		repeated.WriteString(character)
+// 	}
+// 	return repeated.String()
+// }
