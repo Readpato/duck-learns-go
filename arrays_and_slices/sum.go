@@ -1,9 +1,9 @@
 package arraysandslices
 
-func Sum(numbers [5]int) int {
-	var result int
-	for i := range len(numbers) {
-		result += numbers[i]
+func Sum(numbers []int) int {
+	result := 0
+	for _, number := range numbers {
+		result += number
 	}
 	return result
 }
