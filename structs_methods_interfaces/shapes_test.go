@@ -21,8 +21,8 @@ func TestArea(t *testing.T) {
 		shape   Shape
 		hasArea float64
 	}{
-		{name: "Rectangle", shape: Rectangle{12, 6}, hasArea: 72.0},
 		{name: "Circle", shape: Circle{10}, hasArea: 314.1592653589793},
+		{name: "Rectangle", shape: Rectangle{12, 6}, hasArea: 72.0},
 		{name: "Triangle", shape: Triangle{10, 10}, hasArea: 50},
 	}
 
